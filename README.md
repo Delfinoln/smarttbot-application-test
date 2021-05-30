@@ -2,7 +2,7 @@
  This repository is destined to solve smarttbot's application test
 # Considerações Gerais
 ## Solução
-A solução pode ser dividida conforme o diagrama a seguir:
+1. A solução pode ser dividida conforme o diagrama a seguir:
 ![smarttbot-application-test-diagram](https://user-images.githubusercontent.com/28309647/120120667-2f126080-c175-11eb-954f-3c8217d81201.png)
 
 * Source:
@@ -16,3 +16,6 @@ Dentro do Batch-layer temos um container rodando uma aplicação responsável pe
 * Serving-layer:
 
 Dentro do Serving-layer temos o Bucket smarttbottrustedzone, no qual serão armazenados os dados das candles do BTC e do ETH nos tempos de 1 minuto e 5 minutos. Este bucket roda no mesmo container minIO do Bucket destinado ao dado bruto.
+
+
+2. Foi adotado o encapsulamento em Docker Compose para facilitar a reprodução do projeto.
