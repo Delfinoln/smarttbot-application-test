@@ -11,4 +11,8 @@ Nossa fonte de dados é um websocket API da Poloniex. Através dela recebemos os
 
 * Batch-layer:
 
+Dentro do Batch-layer temos um container rodando uma aplicação responsável pela extração dos dados através da API da Poloniex, um Bucket (smarttbotrawzone), rodando em um container com minIO, responsável pelo armazenamento do dado bruto (raw data) e um terceiro container rodando uma aplicação responsável pelo processamento do dado bruto e carga em um segundo Bucket (smarttbottrustedzone).
+
 * Serving-layer:
+
+Dentro do Serving-layer temos o Bucket smarttbottrustedzone, no qual serão armazenados os dados das candles do BTC e do ETH nos tempos de 1 minuto e 5 minutos. Este bucket roda no mesmo container minIO do Bucket destinado ao dado bruto.
