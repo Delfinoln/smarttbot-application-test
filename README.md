@@ -22,3 +22,7 @@ Dentro do Serving-layer temos o Bucket smarttbottrustedzone, no qual serão arma
 
 ## Como utilizar
 Para reproduzir a aplicação, utilize o ```Makefile```
+```
+cd src      # diretório onde está o Makefile
+make all    # build da imagem e inicialização do docker compose
+```
