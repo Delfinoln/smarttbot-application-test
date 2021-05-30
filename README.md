@@ -11,11 +11,11 @@ Nossa fonte de dados é um websocket API da Poloniex. Através dela recebemos os
 
 * Batch-layer:
 
-Dentro do Batch-layer temos um container rodando uma aplicação responsável pela extração dos dados através da API da Poloniex, um Bucket (smarttbotrawzone), rodando em um container com minIO, responsável pelo armazenamento do dado bruto (raw data) e um terceiro container rodando uma aplicação responsável pelo processamento do dado bruto e carga em um segundo Bucket (smarttbottrustedzone).
+Dentro do Batch-layer temos um container rodando uma aplicação responsável pela extração dos dados através da API da Poloniex, um Bucket (smarttbotrawzone), rodando em um container com MinIO, responsável pelo armazenamento do dado bruto (raw data) e um terceiro container rodando uma aplicação responsável pelo processamento do dado bruto e carga em um segundo Bucket (smarttbottrustedzone).
 
 * Serving-layer:
 
-Dentro do Serving-layer temos o Bucket smarttbottrustedzone, no qual serão armazenados os dados das candles do BTC e do ETH nos tempos de 1 minuto e 5 minutos. Este bucket roda no mesmo container minIO do Bucket destinado ao dado bruto.
+Dentro do Serving-layer temos o Bucket smarttbottrustedzone, no qual serão armazenados os dados das candles do BTC e do ETH nos tempos de 1 minuto e 5 minutos. Este bucket roda no mesmo container MinIO do Bucket destinado ao dado bruto.
 
 
 2. Foi adotado o encapsulamento em Docker Compose para facilitar a reprodução do projeto.
@@ -26,3 +26,11 @@ Para reproduzir a aplicação, utilize o ```Makefile```
 cd src      # diretório onde está o Makefile
 make all    # build da imagem e inicialização do docker compose
 ```
+## Resultado
+Os arquivos de dados, bruto ou processados, estão dentro dos Buckets que podem ser encontrados no diretório ```/src/minio_data/```, diretório compartilhado com o Container por meio de volumes.
+
+## Tecnologias
+* Python
+* API
+* Docker Compose
+* MinIO: minIO é um servidor de armazenamento de objetos, compatível com o serviço de Cloud Amazon S3. MinIO pode ser usado para construir infraestruturas de alta performance para machine learning, analytics ou aplicações com Bigdata
