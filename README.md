@@ -21,4 +21,4 @@ Dentro do Serving-layer temos o Bucket smarttbottrustedzone, no qual serão arma
 2. Foi adotado o encapsulamento em Docker Compose para facilitar a reprodução do projeto.
 
 ## Como utilizar
-Para reproduzir a aplicação, utilize o '''Makefile'''
+Para reproduzir a aplicação, utilize o ```Makefile```
