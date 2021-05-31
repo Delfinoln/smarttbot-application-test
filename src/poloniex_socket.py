@@ -67,13 +67,6 @@ def on_message(ws, message):
             for key in fullrawdata_header:
                 fullrawdata_dict[key].append(cripto_list[fullrawdata_header.index(key) + 2])
 
-            # if t1 <= 60:
-            #     usdt_btc_oneminute.append(float(cripto_list[3]))
-            #     timestamps.append(time.time())
-            #     rawdata_dict["price"] = usdt_btc_oneminute
-            #     rawdata_dict["timestamps"] = timestamps
-            #     df = pd.DataFrame(rawdata_dict, columns=['price', 'timestamps'])
-            #     df.to_csv('rawdata.csv', index=False)
             if t1 > 59:
                 # upload_files("rawdata.csv", "smarttbots3bucket")
                 print("Uploading files")

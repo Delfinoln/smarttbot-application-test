@@ -27,7 +27,14 @@ cd src      # diretório onde está o Makefile
 make all    # build da imagem e inicialização do docker compose
 ```
 ## Resultado
-Os arquivos de dados, bruto ou processados, estão dentro dos Buckets que podem ser encontrados no diretório ```/src/minio_data/```, diretório compartilhado com o Container por meio de volumes.
+A aplicação gera 3 arquivos .csv:
+* fullrawdata.csv: arquivo .csv que contém o dado bruto recebido da API da Poloniex sobre o BTC (id 121) e o ETH (id 149)
+* btc_1min.csv: arquivo .csv com os dados de cada candle do Bitcoin no período de 1 minuto;
+* btc_5min.csv: arquivo .csv com os dados de cada candle do Bitcoin no período de 5 minuto;
+* eth_1min.csv: arquivo .csv com os dados de cada candle do Etherium no período de 1 minuto;
+* eth_5min.csv: arquivo .csv com os dados de cada candle do Etherium no período de 5 minuto.
+
+Os arquivos de dados, bruto ou processados, estão dentro dos Buckets que podem ser encontrados no diretório ```/src/minio_data/```, diretório compartilhado com o Container por meio de volumes. O Bucket smarttbotrawzone é destinado ao arquivo bruto, enquanto o Bucket smarttbottrustedzone é destinado aos dados processados.
 
 ## Tecnologias
 * Python
