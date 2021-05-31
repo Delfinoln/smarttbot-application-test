@@ -7,7 +7,7 @@ RUN pip3 install -r requirements.txt
 
 COPY . .
 
-EXPOSE 9000
+EXPOSE 9001
 CMD [ "python3", "poloniex_socket.py"]
 
 
@@ -20,5 +20,5 @@ RUN pip3 install -r requirements.txt
 
 COPY . .
 
-EXPOSE 9001
+EXPOSE 9002
 CMD [ "python3", "poloniex_enrich.py"]
