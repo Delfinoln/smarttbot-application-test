@@ -27,7 +27,7 @@ cd src      # diretório onde está o Makefile
 make all    # build da imagem e inicialização do docker compose
 ```
 ## Resultado
-A aplicação gera 4 arquivos .csv:
+A aplicação gera 5 arquivos .csv:
 * fullrawdata.csv: arquivo .csv que contém o dado bruto recebido da API da Poloniex sobre o BTC (id 121) e o ETH (id 149)
 * btc_1min.csv: arquivo .csv com os dados de cada candle do Bitcoin no período de 1 minuto;
 * btc_5min.csv: arquivo .csv com os dados de cada candle do Bitcoin no período de 5 minuto;
