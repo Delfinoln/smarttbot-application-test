@@ -40,4 +40,4 @@ Os arquivos de dados, bruto ou processados, estão dentro dos Buckets que podem 
 * Python
 * API
 * Docker Compose
-* MinIO: minIO é um servidor de armazenamento de objetos, compatível com o serviço de Cloud Amazon S3. MinIO pode ser usado para construir infraestruturas de alta performance para machine learning, analytics ou aplicações com Bigdata
+* MinIO: minIO é um servidor de armazenamento de objetos, compatível com o armazenamento S3. MinIO pode ser usado para construir infraestruturas de alta performance para machine learning, analytics ou aplicações com Bigdata
